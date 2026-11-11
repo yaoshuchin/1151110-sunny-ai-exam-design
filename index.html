@@ -76,7 +76,7 @@ nav{background:#fafafbf5}.hero{background:radial-gradient(circle at 80% 40%,#dad
 /* Timer color and fullscreen controls */
 .class-timer{--timer-rgb:151,136,171;--timer-accent:#9788ab}.class-timer .timer-face{gap:6px;background:rgba(var(--timer-rgb),.22);border-color:rgba(var(--timer-rgb),.65)}.class-timer .timer-peek{background:rgba(var(--timer-rgb),.32);border-color:var(--timer-accent)}.class-timer .timer-start{background:var(--timer-accent);color:#fff;text-shadow:0 1px 2px #0008}.class-timer .timer-extras{display:flex;align-items:center;justify-content:center;gap:10px}.class-timer .timer-fullscreen{font:inherit;font-size:11px;border:1px solid #c5bfd1;border-radius:99px;background:#ffffffb8;color:#514660;padding:5px 10px;cursor:pointer}.class-timer .timer-color-label{display:flex;flex-direction:row;align-items:center;gap:5px;margin:0;font-size:11px;color:#514660}.class-timer .timer-color{width:25px;height:23px;padding:1px;border:1px solid #b6aac4;border-radius:7px;background:#fff;cursor:pointer;touch-action:auto}.class-timer .timer-face.urgent{background:rgba(255,218,196,.57);border-color:#d69b7e}.class-timer .timer-face.finished{background:rgba(211,234,220,.57);border-color:#88b59a}.class-timer .timer-peek.urgent{background:#ffd7c6db}.class-timer .timer-peek.finished{background:#d8eddfdc}.class-timer .timer-clock{font-size:43px}.class-timer .timer-heading{font-size:13px}
 </style>
-<!-- ===== 密碼驗證視窗樣式 (Password Gate: nato) ===== -->
+<!-- ===== 門禁驗證視窗樣式 (Access Gate) ===== -->
 <style id="passwordGate_styles">
 #passwordGate {
   position: fixed;
@@ -312,7 +312,7 @@ nav{background:#fafafbf5}.hero{background:radial-gradient(circle at 80% 40%,#dad
 </head>
 <body>
 
-<!-- ===== 密碼驗證視窗 (Password Gate nato) ===== -->
+<!-- ===== 門禁驗證視窗 (Access Gate) ===== -->
 <div id="passwordGate">
   <div id="passwordGate_content">
     <div id="passwordGate_header">
@@ -322,30 +322,30 @@ nav{background:#fafafbf5}.hero{background:radial-gradient(circle at 80% 40%,#dad
     </div>
     <div id="passwordGate_body">
       <p class="gate-desc">
-        本研習系統專為教師命題與 AI 協作評量設計，請輸入通行密碼解鎖完整內容。
+        本研習系統專為教師命題與 AI 協作評量設計，請輸入通行金鑰解鎖完整內容。
       </p>
       <form id="passwordGate_form" onsubmit="event.preventDefault(); verifySitePassword();">
         <div class="gate-input-wrapper">
           <input 
             type="password" 
             id="passwordGate_input" 
-            placeholder="請輸入通行密碼" 
+            placeholder="請輸入通行金鑰" 
             autocomplete="current-password" 
             autofocus
           />
-          <button type="button" id="passwordGate_toggle" title="顯示/隱藏密碼" onclick="toggleSitePasswordVisibility()">
+          <button type="button" id="passwordGate_toggle" title="顯示/隱藏金鑰" onclick="toggleSitePasswordVisibility()">
             👁️
           </button>
         </div>
         <div id="passwordGate_error">
-          ⚠️ 密碼錯誤，請重新輸入！
+          ⚠️ 通行金鑰錯誤，請重新輸入！
         </div>
         <button type="submit" id="passwordGate_submit">
           解鎖進入平台 ➔
         </button>
       </form>
       <div class="gate-footer-hint">
-        💡 通行密碼：<strong>nato</strong>
+        💡 通行金鑰：<strong>nato</strong>
       </div>
     </div>
   </div>
